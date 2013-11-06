@@ -39,6 +39,9 @@ class Phone(object):
 	def area_code(self):
 		return self.areaCode
 
+	'''
+		This function returns a neatly formatted string containing the phone
+	'''
 	def pretty(self):
-		pretty_num = "(" + self.areaCode + ") " + self.number[3:6] + "-" + self.number[6:]
+		pretty_num = "({0}) {1}-{2}".format(self.areaCode, self.number[3:6],self.number[6:])
 		return pretty_num
