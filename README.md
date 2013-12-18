@@ -8,3 +8,8 @@ Each exercise is represented by a folder of it's own. Any files with the word 't
 These files are for learning purposes only.
 
 Finally, a big thank you to the creator of Exercism.io, Katrina Owen. 
+
+UPDATE
+=======
+
+I have also been working on coding exercises on CheckIO.org, I'll post some of the trickier exercises too.
