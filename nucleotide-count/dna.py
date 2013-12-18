@@ -20,9 +20,8 @@ class DNA(object):
 		Given a DNA strand, update the nucleotide map with latest counts
 	'''
 	def init_map(self):
-		for nucleotide in self.strand:
-				self.nucleotide_map[nucleotide] += 1
-
+		for key in self.nucleotide_map:
+				self.nucleotide_map[key] += self.strand.count(key)
 	'''
 		Given a nucleotide i.e. A, C, G, T
 		return the count of such nucleotide inside the DNA strand
