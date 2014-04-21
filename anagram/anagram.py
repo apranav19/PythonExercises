@@ -10,11 +10,18 @@ class Anagram(object):
 		listw.sort()
 		return ''.join(listw)
 
+	def preq_checks(self, word, req_length):
+		return (self.word != word and len(word) == req_length)
+
+	def norm_check(self, norm_word, raw_word):
+		return (norm_word == self.normalize(raw_word))
+
 	# Check if any of the words in the list are anagrams of the current instance
 	def match(self, wordlist):
 		normalized_word = self.normalize(self.word)
 		req_length = len(normalized_word)
-		result_list = []
+		wordlist = map(str.lower, wordlist)
+		result_list = filter(self.norm_check, filter(preq_checks, wordlist))
 		for word in wordlist:
 			# Check word length
 			if len(word) != req_length:
